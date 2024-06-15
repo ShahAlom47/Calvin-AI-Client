@@ -18,7 +18,9 @@ const PrivetRouter = ({ children }) => {
         return <LoadingRing></LoadingRing>
     }
     if (user) {
-        return ( <> {children} </>) }
+        return ( <> {children} </>)
+       
+     }
 
     if ( !user) {
         toast.info('Login required, please login first');

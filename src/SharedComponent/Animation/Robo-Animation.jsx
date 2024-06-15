@@ -1,7 +1,8 @@
 import { useLottie } from "lottie-react";
-import animation from '../../assets/Robo-Animation.json'
+import PropTypes from 'prop-types'; // ES6
 
-const AuthenticationGIF = () => {
+const AuthenticationGIF = ({animation}) => {
+    console.log(typeof animation);
     const options = {
         animationData: animation,
         loop: true
@@ -18,3 +19,6 @@ const AuthenticationGIF = () => {
 };
 
 export default AuthenticationGIF;
+AuthenticationGIF.propTypes = {
+    animation: PropTypes.object.isRequired,
+}

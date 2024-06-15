@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AuthenticationGIF from "../SharedComponent/Animation/Robo-Animation";
 import SocialLogin from "../SharedComponent/SocialLogin";
 import useUser from "../CustomHocks/useUser";
-
+import animation from '../assets/Robo-Animation.json'
 
 
 
@@ -94,7 +94,7 @@ const Login = () => {
 
             <div className="md:w-1/2 lg:w-1/2 p-5 pt-1">
                 <div className=" w-full m-auto">
-                    <AuthenticationGIF></AuthenticationGIF>
+                    <AuthenticationGIF animation={animation}></AuthenticationGIF>
                 </div>
 
             </div>

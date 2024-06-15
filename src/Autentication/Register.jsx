@@ -1,5 +1,5 @@
 
-
+import animation  from '../assets/Robo-Animation.json'
 import { useForm } from "react-hook-form"
 
 import { Helmet } from "react-helmet";
@@ -106,7 +106,7 @@ const Register = () => {
 
                 <div className="md:w-1/2 lg:w-1/2 p-5 pt-1">
                     <div className=" w-full m-auto flex items-start">
-                        <AuthenticationGIF></AuthenticationGIF>
+                        <AuthenticationGIF animation={animation}></AuthenticationGIF>
                     </div>
 
                 </div>

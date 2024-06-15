@@ -31,7 +31,7 @@ const Navbar = () => {
     },
     {
       name: "Generate-Paint",
-      path: "/generate",
+      path: "/generatePaint",
       type: "public",
     },
   ];
