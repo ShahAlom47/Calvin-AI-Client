@@ -57,7 +57,7 @@ const Login = () => {
             loginUser(data.email,data.password)
             .then(()=>{
                
-                toast.success("Login success")
+                alert("Login success")
                 setTimeout(() => {
                     navigate(location.state ? location.state : '/')
                 }, 1000);

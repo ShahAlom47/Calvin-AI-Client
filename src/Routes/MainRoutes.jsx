@@ -5,6 +5,8 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import Register from "../Autentication/Register";
 import Login from "../Autentication/Login";
+import PrivetRouter from "./PrivetRoutes";
+import GeneratePaint from "../Pages/GeneratePaint/GeneratePaint";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/login',
+        element: <PrivetRouter><GeneratePaint></GeneratePaint></PrivetRouter>
       },
     ]
   },

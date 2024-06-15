@@ -54,6 +54,7 @@ const AuthProvider = ({ children }) => {
          axiosPublic.post('/jwt',{userInfo})
          .then(res=>{
            if(res.data.token){
+            console.log(res);
                  localStorage.setItem('token',res.data.token)
              }
              })
@@ -61,6 +62,7 @@ const AuthProvider = ({ children }) => {
 
      else{
          localStorage.removeItem('token')
+         console.log('logout ');
      }
       setUser(user);
       setLoading(false);
