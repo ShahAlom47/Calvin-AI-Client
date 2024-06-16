@@ -10,6 +10,7 @@ const Navbar = () => {
   const { user, logOutUser } = useUser()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPageLoad, setisPageLoad] = useState(false);
+  const [isActive,setActive]=useState('')
 
   const handelLogOut = () => {
     logOutUser()
@@ -56,9 +57,10 @@ const Navbar = () => {
         {/* menu-lg start */}
         <ul className="hidden lg:flex items-center gap-5 ">
           {menu.map((item) => (
-            <NavLink key={item.path} to={item.path}>
-              {item.name}
-            </NavLink>
+           <button key={item.path} onClick={()=>setActive(item.path)}>
+             <NavLink className={`${isActive==item.path?'text-pink-600':''} font-semibold`}  to={item.path}>
+           {item.name}
+         </NavLink></button>
           ))}
           {user && user?.email ? (
             <>
@@ -103,14 +105,14 @@ const Navbar = () => {
                 } `}
             >
               {menu.map((item) => (
-                <NavLink
-                  className="border-b-2 hover:border-orange-500 transition duration-200
-                   "
-                  key={item.path}
-                  to={item.path}
-                >
-                  {item.name}
-                </NavLink>
+               <button key={item.path} onClick={()=>setActive(item.path)} className={`${isActive==item.path?'text-yellow-400':''}`}> <NavLink
+               className=" font-semibold border-b-2 hover:border-orange-500 transition duration-200
+                "
+               
+               to={item.path}
+             >
+               {item.name}
+             </NavLink></button>
               ))}
               {user && user?.email ? (
                 <>
